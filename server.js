@@ -65,6 +65,12 @@ app.get("/yourCollection/new", (req, res) => {
   res.render("new.ejs");
 });
 
+// Create
+app.post("/yourCollection", (req, res) => {
+  console.log("recieved");
+  res.send("received");
+});
+
 //___________________
 //Listener
 //___________________
