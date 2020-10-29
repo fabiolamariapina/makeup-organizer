@@ -11,12 +11,22 @@
     </header>
     <main>
       <div class="container">
-        <h3><%=makeup.name %></h3>
+        <h3>
+          <span class="data"> <%=makeup.name %> </span>
+        </h3>
         <img src="<%=makeup.img %>" />
-        <h5>Shade:<%=makeup.shade %></h5>
-        <h5>Type:<%=makeup.type %></h5>
-        <h5>Buy More:<%=makeup.buyMore %></h5>
-        <h5>Tags:<%=makeup.tags %></h5>
+        <h5>
+          <span class="data">Shade: <%=makeup.shade %></span>
+        </h5>
+        <h5>
+          <span class="data">Type: <%=makeup.type %></span>
+        </h5>
+        <h5>
+          <span class="data">Buy More: <%=makeup.buyMore %></span>
+        </h5>
+        <h5>
+          <span class="data"> Tags: <%=makeup.tags %> </span>
+        </h5>
         <button>
           <a href="/yourCollection">Back to Your Collection</a>
         </button>

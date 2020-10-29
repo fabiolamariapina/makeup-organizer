@@ -73,7 +73,9 @@ app.get("/yourCollection", (req, res) => {
 // Show
 app.get("/yourCollection/:id", (req, res) => {
   Makeup.findById(req.params.id, (err, foundMakeup) => {
-    res.send(foundMakeup);
+    res.render("show.ejs", {
+      makeup: foundMakeup,
+    });
   });
 });
 
