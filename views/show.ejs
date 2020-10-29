@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%=makeup.name %></title>
+  </head>
+  <body>
+    <header>
+      <h1>makeup organizer</h1>
+    </header>
+    <main>
+      <div class="container">
+        <h3><%=makeup.name %></h3>
+        <img src="<%=makeup.img %>" />
+        <h5>Shade:<%=makeup.shade %></h5>
+        <h5>Type:<%=makeup.type %></h5>
+        <h5>Buy More:<%=makeup.buyMore %></h5>
+        <h5>Tags:<%=makeup.tags %></h5>
+        <button>
+          <a href="/yourCollection">Back to Your Collection</a>
+        </button>
+      </div>
+    </main>
+    <footer>
+      <p>Coded by Fabiola Pina</p>
+    </footer>
+  </body>
+</html>
