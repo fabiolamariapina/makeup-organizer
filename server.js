@@ -83,7 +83,7 @@ app.post("/yourCollection", (req, res) => {
     req.body.buyMore = false;
   }
   Makeup.create(req.body, (error, createdMakeup) => {
-    res.send(req.body);
+    res.redirect("/yourCollection");
   });
 });
 
