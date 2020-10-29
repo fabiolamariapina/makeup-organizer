@@ -62,7 +62,12 @@ app.get("/", (req, res) => {
 
 // Index
 app.get("/yourCollection", (req, res) => {
-  res.render("index.ejs");
+  Makeup.find({}, (error, allMakeup) => {
+    console.log(allMakeup);
+    res.render("index.ejs", {
+      makeup: allMakeup,
+    });
+  });
 });
 
 // New
