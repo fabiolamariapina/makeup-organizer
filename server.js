@@ -54,6 +54,10 @@ app.use(methodOverride("_method")); // allow POST, PUT and DELETE from a form
 app.get("/", (req, res) => {
   res.render("home.ejs");
 });
+// Index
+app.get("/yourCollection", (req, res) => {
+  res.send("Hello World");
+});
 
 //___________________
 //Listener
