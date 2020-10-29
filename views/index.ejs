@@ -18,7 +18,10 @@
           </a>
         </h4>
         <img src="<%=makeup[i].img %>" />
-        <form action="/yourCollection/<%=makeup[i].id %>?_method=DELETE">
+        <form
+          action="/yourCollection/<%=makeup[i].id %>?_method=DELETE"
+          method="POST"
+        >
           <input type="submit" value="DELETE" />
         </form>
         <% } %>
