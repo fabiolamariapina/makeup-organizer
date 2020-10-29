@@ -96,6 +96,15 @@ app.post("/yourCollection", (req, res) => {
   });
 });
 
+// Edit
+app.get("/yourCollection/:id/edit", (req, res) => {
+  Makeup.findById(req.params.id, (err, foundMakeup) => {
+    res.render("edit.ejs", {
+      makeup: foundMakeup,
+    });
+  });
+});
+
 // Delete
 app.delete("/yourCollection/:id", (req, res) => {
   Makeup.findByIdAndRemove(req.params.id, (err, data) => {
