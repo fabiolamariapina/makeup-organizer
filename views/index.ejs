@@ -11,8 +11,10 @@
     </header>
     <main>
       <% for (let i = 0; i < makeup.length; i++) { %>
-      <h4><%=makeup[i].name %></h4>
-      <img src="<%= makeup[i].img %>" />
+      <h4>
+        <a href="/yourCollection/<%=makeup[i].id %>"> <%=makeup[i].name %> </a>
+      </h4>
+      <img src="<%=makeup[i].img %>" />
       <div class="container">
         <button class="create">
           <a href="/yourCollection/new">ADD MORE MAKEUP</a>
