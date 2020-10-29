@@ -98,7 +98,9 @@ app.post("/yourCollection", (req, res) => {
 
 // Delete
 app.delete("/yourCollection/:id", (req, res) => {
-  res.send("deleting");
+  Makeup.findByIdAndRemove(req.params.id, (err, data) => {
+    res.redirect("/yourCollection");
+  });
 });
 
 //___________________
