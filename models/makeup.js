@@ -5,8 +5,8 @@ const makeupSchema = new mongooose.Schema({
   name: { type: String, required: true },
   img: String,
   shade: String,
-  buyMore: Boolean,
   tags: String,
+  buyMore: Boolean,
 });
 
 const Makeup = mongoose.model("Makeup", makeupSchema);

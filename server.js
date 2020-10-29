@@ -67,6 +67,11 @@ app.get("/yourCollection/new", (req, res) => {
 
 // Create
 app.post("/yourCollection", (req, res) => {
+  if (req.body.buyMore === "on") {
+    req.body.buyMore = true;
+  } else {
+    req.body.buyMore = false;
+  }
   res.send(req.body);
 });
 
