@@ -62,7 +62,7 @@ app.get("/", (req, res) => {
 
 // Index
 app.get("/yourCollection", (req, res) => {
-  res.send("Hello World");
+  res.render("index.ejs");
 });
 
 // New
