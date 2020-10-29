@@ -62,7 +62,7 @@ app.get("/yourCollection", (req, res) => {
 
 // New
 app.get("/yourCollection/new", (req, res) => {
-  res.send("new");
+  res.render("new.ejs");
 });
 
 //___________________
