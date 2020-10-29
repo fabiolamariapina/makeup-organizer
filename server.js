@@ -96,6 +96,11 @@ app.post("/yourCollection", (req, res) => {
   });
 });
 
+// Delete
+app.delete("/yourCollection/:id", (req, res) => {
+  res.send("deleting");
+});
+
 //___________________
 //Listener
 //___________________
