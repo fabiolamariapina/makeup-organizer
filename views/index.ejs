@@ -10,15 +10,24 @@
       <h1>makeup organizer</h1>
     </header>
     <main>
-      <% for (let i = 0; i < makeup.length; i++) { %>
-      <h4>
-        <a href="/yourCollection/<%=makeup[i].id %>"> <%=makeup[i].name %> </a>
-      </h4>
-      <img src="<%=makeup[i].img %>" />
-      <% } %>
-      <button class="create">
-        <a href="/yourCollection/new">ADD MORE MAKEUP</a>
-      </button>
+      <div class="container">
+        <% for (let i = 0; i < makeup.length; i++) { %>
+        <h4>
+          <a href="/yourCollection/<%=makeup[i].id %>">
+            <%=makeup[i].name %>
+          </a>
+        </h4>
+        <img src="<%=makeup[i].img %>" />
+        <form>
+          <input type="submit" value="DELETE" />
+        </form>
+        <% } %>
+      </div>
+      <div class="button">
+        <button class="create">
+          <a href="/yourCollection/new">ADD MORE MAKEUP</a>
+        </button>
+      </div>
     </main>
     <footer>
       <p>Coded by Fabiola Pina</p>
