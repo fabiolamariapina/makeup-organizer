@@ -1,6 +1,6 @@
-const mongooose = require("mongoose");
+const mongoose = require("mongoose");
 
-const makeupSchema = new mongooose.Schema({
+const makeupSchema = new mongoose.Schema({
   type: String,
   name: { type: String, required: true },
   img: String,

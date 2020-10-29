@@ -15,6 +15,11 @@ const db = mongoose.connection;
 const PORT = process.env.PORT || 3000;
 
 //___________________
+//Data
+//___________________
+const Makeup = require("./models/makeup.js");
+
+//___________________
 //Database
 //___________________
 // How to connect to the
@@ -72,7 +77,9 @@ app.post("/yourCollection", (req, res) => {
   } else {
     req.body.buyMore = false;
   }
-  res.send(req.body);
+  Makeup.create(req.body, (error, createdMakeup) => {
+    res.send(req.body);
+  });
 });
 
 //___________________
