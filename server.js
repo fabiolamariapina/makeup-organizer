@@ -70,6 +70,13 @@ app.get("/yourCollection", (req, res) => {
   });
 });
 
+// Show
+app.get("/yourCollection/:id", (req, res) => {
+  Makeup.findById(req.params.id, (err, foundMakeup) => {
+    res.send(foundMakeup);
+  });
+});
+
 // New
 app.get("/yourCollection/new", (req, res) => {
   res.render("new.ejs");
