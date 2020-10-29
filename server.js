@@ -67,8 +67,7 @@ app.get("/yourCollection/new", (req, res) => {
 
 // Create
 app.post("/yourCollection", (req, res) => {
-  console.log("recieved");
-  res.send("received");
+  res.send(req.body);
 });
 
 //___________________
