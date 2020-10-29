@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add More Makeup</title>
+  </head>
+  <body>
+    <header>
+      <h1>makeup organizer</h1>
+    </header>
+    <main>
+      <form action="/yourCollection" method="POST">
+        <label>TYPE</label>
+        <select id="type">
+          <option value="eyes">Eyes</option>
+          <option value="lips">Lips</option>
+          <option value="face">Face</option>
+        </select>
+        NAME: <input type="text" name="name" /> IMAGE:
+        <input type="text" name="image" /> SHADE:
+        <input type="text" name="shade" /> BUY MORE:
+        <input type="checkbox" name="buy-more" />
+        TAGS: <input type="text" name="tags" />
+      </form>
+    </main>
+    <footer>
+      <p>Coded by Fabiola Pina</p>
+    </footer>
+  </body>
+</html>
