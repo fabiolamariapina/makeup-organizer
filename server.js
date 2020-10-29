@@ -50,8 +50,9 @@ app.use(methodOverride("_method")); // allow POST, PUT and DELETE from a form
 // Routes
 //___________________
 //localhost:3000
+// Welcome / Home Page
 app.get("/", (req, res) => {
-  res.send("bananas");
+  res.render("home.ejs");
 });
 
 //___________________
