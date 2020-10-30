@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Add More Makeup</title>
+    <title>Edit Makeup</title>
   </head>
   <body>
     <header>
@@ -11,8 +11,8 @@
     </header>
     <main>
       <div class="container">
-        <form action="/yourCollection" method="POST">
-          <label>TYPE:</label>
+        <form>
+          <label>TYPE: </label>
           <select id="type">
             <option value="select" disabled selected>
               Where does the product go?
@@ -21,12 +21,15 @@
             <option value="lips">Lips</option>
             <option value="face">Face</option>
           </select>
-          NAME: <input type="text" name="name" /> IMAGE:
-          <input type="text" name="img" /> SHADE:
-          <input type="text" name="shade" /> BUY MORE:
-          <input type="checkbox" name="buy-more" />
-          TAGS: <input type="text" name="tags" />
-          <input type="submit" value="ADD" />
+          NAME:
+          <input type="text" name="name" value="<%=makeup.name %>" />
+          IMAGE:
+          <input type="text" name="img" value="<%=makeup.img %>" /> SHADE:
+          <input type="text" name="shade" value="<%=makeup.shade %>" /> BUY
+          MORE:
+          <input type="checkbox" name="buy-more" value="<%=makeup.buyMore %>" />
+          TAGS: <input type="text" name="tags" value="<%=makeup.tags %>" />
+          <input type="submit" value="EDIT" />
         </form>
       </div>
     </main>
