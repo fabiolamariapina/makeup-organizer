@@ -112,7 +112,15 @@ app.put("yourCollection/:id", (req, res) => {
   } else {
     req.body.buyMore = false;
   }
-  res.send(req.body);
+  Makeup.findByIdAndUpdate(
+    req.params.id,
+    req.body,
+    { new: true },
+    (err, updatedModel) => {
+      console.log(updatedModel);
+      res.send(updatedModel);
+    }
+  );
 });
 
 // Delete
