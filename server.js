@@ -105,6 +105,16 @@ app.get("/yourCollection/:id/edit", (req, res) => {
   });
 });
 
+// Put
+app.put("yourCollection/:id", (req, res) => {
+  if (req.body.buyMore === "on") {
+    req.body.buyMore = true;
+  } else {
+    req.body.buyMore = false;
+  }
+  res.send(req.body);
+});
+
 // Delete
 app.delete("/yourCollection/:id", (req, res) => {
   Makeup.findByIdAndRemove(req.params.id, (err, data) => {
