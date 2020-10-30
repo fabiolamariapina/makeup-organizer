@@ -106,7 +106,8 @@ app.get("/yourCollection/:id/edit", (req, res) => {
 });
 
 // Put
-app.put("yourCollection/:id", (req, res) => {
+app.put("/yourCollection/:id", (req, res) => {
+  console.log(req.body);
   if (req.body.buyMore === "on") {
     req.body.buyMore = true;
   } else {
