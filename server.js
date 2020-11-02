@@ -81,8 +81,7 @@ app.get("/yourCollection/:id", (req, res) => {
 
 // New
 app.get("/yourCollection/new", (req, res) => {
-  // res.render("new.ejs");
-  res.send("new");
+  res.render("new.ejs");
 });
 
 // Create
