@@ -14,13 +14,13 @@
       <div class="container">
         <form action="/yourCollection/<%=makeup.id%>?_method=PUT" method="POST">
           <label>TYPE: </label>
-          <select id="type">
+          <select id="type" name="type">
             <option value="select" disabled selected>
               Where does the product go?
             </option>
-            <option value="eyes">Eyes</option>
-            <option value="lips">Lips</option>
-            <option value="face">Face</option>
+            <option value="eyes" name="eyes">Eyes</option>
+            <option value="lips" name="lips">Lips</option>
+            <option value="face" name="face">Face</option>
           </select>
           NAME:
           <input type="text" name="name" value="<%=makeup.name %>" />
