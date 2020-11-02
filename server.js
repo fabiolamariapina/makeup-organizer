@@ -97,13 +97,13 @@ app.post("/yourCollection", (req, res) => {
 });
 
 // // Edit
-// app.get("/yourCollection/:id/edit", (req, res) => {
-//   Makeup.findById(req.params.id, (err, foundMakeup) => {
-//     res.render("edit.ejs", {
-//       makeup: foundMakeup,
-//     });
-//   });
-// });
+app.get("/yourCollection/:id/edit", (req, res) => {
+  Makeup.findById(req.params.id, (err, foundMakeup) => {
+    res.render("edit.ejs", {
+      makeup: foundMakeup,
+    });
+  });
+});
 
 // // Put
 // app.put("/yourCollection/:id", (req, res) => {
