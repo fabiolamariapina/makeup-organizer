@@ -68,18 +68,8 @@ app.get("/", (req, res) => {
 // Index
 app.get("/yourCollection", (req, res) => {
   Makeup.find({}, (error, allMakeup) => {
-    console.log(allMakeup);
     res.render("index.ejs", {
       makeup: allMakeup,
-    });
-  });
-});
-
-// Show
-app.get("/yourCollection/:id", (req, res) => {
-  Makeup.findById(req.params.id, (err, foundMakeup) => {
-    res.render("show.ejs", {
-      makeup: foundMakeup,
     });
   });
 });
@@ -91,6 +81,7 @@ app.get("/yourCollection/new", (req, res) => {
 
 // Create
 app.post("/yourCollection", (req, res) => {
+  console.log(req.body);
   if (req.body.buyMore === "on") {
     req.body.buyMore = true;
   } else {
@@ -98,6 +89,15 @@ app.post("/yourCollection", (req, res) => {
   }
   Makeup.create(req.body, (error, createdMakeup) => {
     res.redirect("/yourCollection");
+  });
+});
+
+// Show
+app.get("/yourCollection/:id", (req, res) => {
+  Makeup.findById(req.params.id, (err, foundMakeup) => {
+    res.render("show.ejs", {
+      makeup: foundMakeup,
+    });
   });
 });
 
