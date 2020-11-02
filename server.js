@@ -81,7 +81,8 @@ app.get("/yourCollection/:id", (req, res) => {
 
 // New
 app.get("/yourCollection/new", (req, res) => {
-  res.render("new.ejs");
+  // res.render("new.ejs");
+  res.send("new");
 });
 
 // Create
@@ -117,7 +118,7 @@ app.put("/yourCollection/:id", (req, res) => {
     req.body,
     { new: true },
     (err, updatedMakeup) => {
-      res.send(updatedMakeup);
+      res.redirect("/yourCollection");
     }
   );
 });
