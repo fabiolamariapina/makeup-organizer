@@ -81,7 +81,6 @@ app.get("/yourCollection/new", (req, res) => {
 
 // Create
 app.post("/yourCollection", (req, res) => {
-  console.log(req.body);
   if (req.body.buyMore === "on") {
     req.body.buyMore = true;
   } else {
