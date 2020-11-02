@@ -15,6 +15,11 @@ const db = mongoose.connection;
 const PORT = process.env.PORT || 3000;
 
 //___________________
+//Configuration
+//___________________
+require("dotenv").config();
+
+//___________________
 //Data
 //___________________
 const Makeup = require("./models/makeup.js");
