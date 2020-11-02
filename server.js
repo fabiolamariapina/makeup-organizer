@@ -96,27 +96,27 @@ app.post("/yourCollection", (req, res) => {
   });
 });
 
-// Edit
-app.get("/yourCollection/:id/edit", (req, res) => {
-  Makeup.findById(req.params.id, (err, foundMakeup) => {
-    res.render("edit.ejs", {
-      makeup: foundMakeup,
-    });
-  });
-});
+// // Edit
+// app.get("/yourCollection/:id/edit", (req, res) => {
+//   Makeup.findById(req.params.id, (err, foundMakeup) => {
+//     res.render("edit.ejs", {
+//       makeup: foundMakeup,
+//     });
+//   });
+// });
 
-// Put
-app.put("/yourCollection/:id", (req, res) => {
-  console.log(req.body);
-  if (req.body.buyMore === "on") {
-    req.body.buyMore = true;
-  } else {
-    req.body.buyMore = false;
-  }
-  Makeup.findByIdAndUpdate(req.params.id, req.body, (err, updatedModel) => {
-    res.redirect("/yourCollection");
-  });
-});
+// // Put
+// app.put("/yourCollection/:id", (req, res) => {
+//   console.log(req.body);
+//   if (req.body.buyMore === "on") {
+//     req.body.buyMore = true;
+//   } else {
+//     req.body.buyMore = false;
+//   }
+//   Makeup.findByIdAndUpdate(req.params.id, req.body, (err, updatedModel) => {
+//     res.redirect("/yourCollection");
+//   });
+// });
 
 // Delete
 app.delete("/yourCollection/:id", (req, res) => {
