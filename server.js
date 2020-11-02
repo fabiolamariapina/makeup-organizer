@@ -106,17 +106,14 @@ app.get("/yourCollection/:id/edit", (req, res) => {
 });
 
 // // Put
-// app.put("/yourCollection/:id", (req, res) => {
-//   console.log(req.body);
-//   if (req.body.buyMore === "on") {
-//     req.body.buyMore = true;
-//   } else {
-//     req.body.buyMore = false;
-//   }
-//   Makeup.findByIdAndUpdate(req.params.id, req.body, (err, updatedModel) => {
-//     res.redirect("/yourCollection");
-//   });
-// });
+app.put("/yourCollection/:id", (req, res) => {
+  if (req.body.buyMore === "on") {
+    req.body.buyMore = true;
+  } else {
+    req.body.buyMore = false;
+  }
+  res.send(req.body);
+});
 
 // Delete
 app.delete("/yourCollection/:id", (req, res) => {
