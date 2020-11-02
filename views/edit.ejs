@@ -26,10 +26,10 @@
           <input type="text" name="name" value="<%=makeup.name %>" />
           IMAGE:
           <input type="text" name="img" value="<%=makeup.img %>" /> SHADE:
-          <input type="text" name="shade" value="<%=makeup.shade %>" /> BUY
-          MORE:
-          <input type="checkbox" name="buyMore" value="<%=makeup.buyMore %>" />
-          TAGS: <input type="text" name="tags" value="<%=makeup.tags %>" />
+          <input type="text" name="shade" value="<%=makeup.shade %>" />
+          BUY MORE: <input type="checkbox" name="buyMore" <% if(makeup.buyMore
+          === true){ %> checked <% } %> /> TAGS:
+          <input type="text" name="tags" value="<%=makeup.tags %>" />
           <input type="submit" value="EDIT" />
         </form>
       </div>
