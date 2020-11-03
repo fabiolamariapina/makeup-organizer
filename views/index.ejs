@@ -14,7 +14,7 @@
       <div class="container">
         <% for (let i = 0; i < makeup.length; i++) { %>
         <h4>
-          <a href="/yourCollection/<%=makeup[i].id %>">
+          <a class="name" href="/yourCollection/<%=makeup[i].id %>">
             <%=makeup[i].name %>
           </a>
         </h4>
@@ -43,6 +43,24 @@
   <style>
     body {
       background-color: #fdf8f5;
+      color: #4f4846;
+    }
+
+    main {
+      background-color: #e8cebf;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .name {
+      color: #4f4846;
+    }
+
+    img {
+      width: 30%;
+      height: 50%;
     }
   </style>
 </html>
