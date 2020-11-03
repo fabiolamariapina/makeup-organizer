@@ -25,14 +25,16 @@
         >
           <input type="submit" value="DELETE" />
         </form>
-        <button class="edit">
-          <a href="/yourCollection/<%=makeup[i].id; %>/edit">Edit</a>
+        <button>
+          <a class="edit" href="/yourCollection/<%=makeup[i].id; %>/edit"
+            >Edit</a
+          >
         </button>
         <% } %>
       </div>
       <div class="button">
-        <button class="create">
-          <a href="/yourCollection/new">ADD MORE MAKEUP</a>
+        <button>
+          <a class="create" href="/yourCollection/new">ADD MORE MAKEUP</a>
         </button>
       </div>
     </main>
@@ -45,6 +47,11 @@
       background-color: #fdf8f5;
       color: #4f4846;
     }
+
+    /* .product {
+      display: flex;
+      flex-wrap: wrap;
+    } */
 
     main {
       background-color: #e8cebf;
@@ -61,6 +68,16 @@
     img {
       width: 30%;
       height: 50%;
+    }
+
+    button {
+      background-color: #ddaf94;
+      cursor: pointer;
+    }
+
+    .edit,
+    .create {
+      color: #fdf8f5;
     }
   </style>
 </html>
