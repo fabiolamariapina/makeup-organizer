@@ -14,16 +14,28 @@
       <div class="container">
         <img src="<%=makeup.img %>" />
         <h5>
-          <span class="data">Shade: <%=makeup.shade %></span>
+          <span class="data"
+            >Shade:
+            <span class="specific"> <%=makeup.shade %> </span>
+          </span>
         </h5>
         <h5>
-          <span class="data">Type: <%=makeup.type %></span>
+          <span class="data"
+            >Type:
+            <span class="specific"> <%=makeup.type %> </span>
+          </span>
         </h5>
         <h5>
-          <span class="data">Buy More: <%=makeup.buyMore %></span>
+          <span class="data"
+            >Buy More:
+            <span class="specific"> <%=makeup.buyMore %> </span>
+          </span>
         </h5>
         <h5>
-          <span class="data"> Tags: <%=makeup.tags %> </span>
+          <span class="data">
+            Tags:
+            <span class="specific"> <%=makeup.tags %> </span>
+          </span>
         </h5>
         <button>
           <a href="/yourCollection">Back to Your Collection</a>
@@ -37,6 +49,46 @@
   <style>
     body {
       background-color: #fdf8f5;
+      color: #4f4846;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    img {
+      width: 50%;
+    }
+
+    .data {
+      font-size: 20px;
+    }
+
+    .specific {
+      font-weight: normal;
+    }
+
+    button {
+      background-color: #ddaf94;
+      border-radius: 15px;
+      padding: 20px;
+      cursor: pointer;
+    }
+
+    a {
+      text-decoration: none;
+      color: #fdf8f5;
+      font-size: 16px;
+    }
+
+    p {
+      opacity: 0.75;
     }
   </style>
 </html>
