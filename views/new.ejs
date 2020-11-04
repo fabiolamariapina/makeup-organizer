@@ -12,25 +12,23 @@
     <hr />
     <h2>Add to Your Collection</h2>
     <main>
-      <div class="container">
-        <form action="/yourCollection" method="POST">
-          <label>TYPE:</label>
-          <select id="type" name="type">
-            <option value="select" disabled selected>
-              Where does the product go?
-            </option>
-            <option value="eyes" name="eyes">Eyes</option>
-            <option value="lips" name="lips">Lips</option>
-            <option value="face" name="face">Face</option>
-          </select>
-          NAME: <input type="text" name="name" /> IMAGE:
-          <input type="text" name="img" /> SHADE:
-          <input type="text" name="shade" /> BUY MORE:
-          <input type="checkbox" name="buy-more" />
-          TAGS: <input type="text" name="tags" />
-          <input type="submit" value="ADD" />
-        </form>
-      </div>
+      <form class="container" action="/yourCollection" method="POST">
+        <label>TYPE:</label>
+        <select id="type" name="type">
+          <option value="select" disabled selected>
+            Where does the product go?
+          </option>
+          <option value="eyes" name="eyes">Eyes</option>
+          <option value="lips" name="lips">Lips</option>
+          <option value="face" name="face">Face</option>
+        </select>
+        NAME: <input type="text" name="name" /> IMAGE:
+        <input type="text" name="img" /> SHADE:
+        <input type="text" name="shade" /> BUY MORE:
+        <input type="checkbox" name="buy-more" />
+        TAGS: <input type="text" name="tags" />
+        <input type="submit" value="ADD" />
+      </form>
     </main>
     <footer>
       <hr />
@@ -43,11 +41,11 @@
       color: #4f4846;
     }
 
-    /* .container {
+    .container {
       display: flex;
       flex-direction: column;
-      align-items: center;
-    } */
+      justify-content: center;
+    }
 
     p {
       opacity: 0.75;
