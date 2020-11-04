@@ -12,28 +12,30 @@
     <hr />
     <main>
       <h2>Edit Your Collection</h2>
-      <div class="container">
-        <form action="/yourCollection/<%=makeup.id%>?_method=PUT" method="POST">
-          <label>TYPE: </label>
-          <select id="type" name="type">
-            <option value="select" disabled selected>
-              Where does the product go?
-            </option>
-            <option value="eyes" name="eyes">Eyes</option>
-            <option value="lips" name="lips">Lips</option>
-            <option value="face" name="face">Face</option>
-          </select>
-          NAME:
-          <input type="text" name="name" value="<%=makeup.name %>" />
-          IMAGE:
-          <input type="text" name="img" value="<%=makeup.img %>" /> SHADE:
-          <input type="text" name="shade" value="<%=makeup.shade %>" />
-          BUY MORE: <input type="checkbox" name="buyMore" <% if(makeup.buyMore
-          === true){ %> checked <% } %> /> TAGS:
-          <input type="text" name="tags" value="<%=makeup.tags %>" />
-          <input class="edit" type="submit" value="EDIT" />
-        </form>
-      </div>
+      <form
+        class="container"
+        action="/yourCollection/<%=makeup.id%>?_method=PUT"
+        method="POST"
+      >
+        <label>TYPE: </label>
+        <select id="type" name="type">
+          <option value="select" disabled selected>
+            Where does the product go?
+          </option>
+          <option value="eyes" name="eyes">Eyes</option>
+          <option value="lips" name="lips">Lips</option>
+          <option value="face" name="face">Face</option>
+        </select>
+        NAME:
+        <input type="text" name="name" value="<%=makeup.name %>" />
+        IMAGE:
+        <input type="text" name="img" value="<%=makeup.img %>" /> SHADE:
+        <input type="text" name="shade" value="<%=makeup.shade %>" />
+        BUY MORE: <input type="checkbox" name="buyMore" <% if(makeup.buyMore ===
+        true){ %> checked <% } %> /> TAGS:
+        <input type="text" name="tags" value="<%=makeup.tags %>" />
+        <input class="edit" type="submit" value="EDIT" />
+      </form>
     </main>
     <footer>
       <hr />
