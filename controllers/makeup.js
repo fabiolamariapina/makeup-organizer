@@ -11,7 +11,7 @@ const Makeup = require("../models/makeup.js");
 //___________________
 //localhost:3000
 // Welcome / Home Page
-router.get("/", (req, res) => {
+router.get("/home", (req, res) => {
   res.render("home.ejs");
 });
 
