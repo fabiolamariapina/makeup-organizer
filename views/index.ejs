@@ -7,7 +7,14 @@
   </head>
   <body>
     <header>
-      <h1>makeup organizer</h1>
+      <nav>
+        <h1>makeup organizer</h1>
+        <div class="right">
+          <button>
+            <a class="create" href="/yourCollection/new">ADD MORE MAKEUP</a>
+          </button>
+        </div>
+      </nav>
     </header>
     <hr />
     <h2>Your Collection</h2>
@@ -35,9 +42,6 @@
         </div>
         <% } %>
       </div>
-      <button>
-        <a class="create" href="/yourCollection/new">ADD MORE MAKEUP</a>
-      </button>
     </main>
     <footer>
       <hr />
@@ -48,6 +52,10 @@
     body {
       background-color: #fdf8f5;
       color: #4f4846;
+    }
+
+    h1 {
+      font-size: 32px;
     }
 
     h2,
