@@ -15,12 +15,15 @@ const db = mongoose.connection;
 const PORT = process.env.PORT || 3000;
 
 //___________________
+//Data
+//___________________
+const makeupController = require("./controllers/makeup.js");
+app.use(makeupController);
+
+//___________________
 //Configuration
 //___________________
 require("dotenv").config();
-
-
-
 
 //___________________
 //Database
@@ -53,7 +56,6 @@ app.use(express.urlencoded({ extended: false })); // extended: false - does not 
 app.use(express.json()); // returns middleware that only parses JSON - may or may not need it depending on your project
 //use method override
 app.use(methodOverride("_method")); // allow POST, PUT and DELETE from a form
-
 
 //___________________
 //Listener
