@@ -64,6 +64,9 @@ app.use(makeupController);
 const userController = require("./controllers/users_controller.js");
 app.use("/users", userController);
 
+const sessionsController = require("./controllers/sessions_controller.js");
+app.use("/sessions", sessionsController);
+
 // Route
 app.get("/", (req, res) => {
   res.redirect("/home");
