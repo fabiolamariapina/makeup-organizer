@@ -2,6 +2,11 @@ const express = require("express");
 const router = express.Router();
 
 //___________________
+//Data
+//___________________
+const Makeup = require("../models/makeup.js");
+
+//___________________
 // Routes
 //___________________
 //localhost:3000
