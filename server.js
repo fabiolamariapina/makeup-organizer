@@ -20,6 +20,9 @@ const PORT = process.env.PORT || 3000;
 const makeupController = require("./controllers/makeup.js");
 app.use(makeupController);
 
+const userController = require("./controllers/users_controller.js");
+// app.use(userController);
+
 //___________________
 //Configuration
 //___________________
