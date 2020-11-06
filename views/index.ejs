@@ -13,6 +13,21 @@
           <button>
             <a class="create" href="/yourCollection/new">ADD MORE MAKEUP</a>
           </button>
+          <% if (currentUser) { %>
+          <p>Welcome <%= currentUser.username %></p>
+          <button>
+            <form action="/sessions?_method=DELETE" method="POST">
+              <input type="submit" value="Log Out" class="btn-small red" />
+            </form>
+          </button>
+          <% } else { %>
+          <button>
+            <a href="/users/new">SIGN UP</a>
+          </button>
+          <button>
+            <a href="/sessions/new">LOG IN</a>
+          </button>
+          <% } %>
         </div>
       </nav>
     </header>
