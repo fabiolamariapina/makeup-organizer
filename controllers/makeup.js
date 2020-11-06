@@ -20,13 +20,16 @@ router.get("/yourCollection", (req, res) => {
   Makeup.find({}, (error, allMakeup) => {
     res.render("index.ejs", {
       makeup: allMakeup,
+      currentUser: req.session.currentUser,
     });
   });
 });
 
 // New
 router.get("/yourCollection/new", (req, res) => {
-  res.render("new.ejs");
+  res.render("new.ejs", {
+    currentUser: req.session.currentUser,
+  });
 });
 
 // Create
@@ -46,6 +49,7 @@ router.get("/yourCollection/:id", (req, res) => {
   Makeup.findById(req.params.id, (err, foundMakeup) => {
     res.render("show.ejs", {
       makeup: foundMakeup,
+      currentUser: req.session.currentUser,
     });
   });
 });
@@ -55,6 +59,7 @@ router.get("/yourCollection/:id/edit", (req, res) => {
   Makeup.findById(req.params.id, (err, foundMakeup) => {
     res.render("edit.ejs", {
       makeup: foundMakeup,
+      currentUser: req.session.currentUser,
     });
   });
 });
