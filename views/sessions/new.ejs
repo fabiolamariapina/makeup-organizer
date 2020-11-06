@@ -20,7 +20,10 @@
       <input type="submit" value="LOG IN"> 
      <form>   
     </main>
-   <%- include ('./partials/header.ejs') %>  
+    <footer>
+      <hr />
+      <p>Coded by Fabiola Pina</p>
+    </footer> 
   </body>
   <style>
      body {
@@ -28,10 +31,16 @@
       color: #4f4846;
     } 
 
+    .log-in {
+       display: flex;
+      flex-direction: column;
+      justify-content: center; 
+    }
+
      h2,
     main {
       text-align: center;
-    } 
+    }  
 
      p {
       opacity: 0.75;
