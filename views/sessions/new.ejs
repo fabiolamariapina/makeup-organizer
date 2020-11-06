@@ -6,7 +6,9 @@
     <title>Log In</title> 
   </head>
   <body>
-   <%- include ('./partials/header.ejs') %> 
+    <header>
+      <h1>makeup organizer</h1>
+    </header> 
     <hr />
     <h2>Log In</h2> 
     <main>
@@ -17,10 +19,25 @@
       <input type="password" name="password" />
       <input type="submit" value="LOG IN"> 
      <form>   
-    </main> 
+    </main>
     <footer>
       <hr />
       <p>Coded by Fabiola Pina</p>
     </footer>
   </body>
+  <style>
+     body {
+      background-color: #fdf8f5;
+      color: #4f4846;
+    } 
+
+     h2,
+    main {
+      text-align: center;
+    } 
+
+     p {
+      opacity: 0.75;
+    } 
+  </style> 
 </html> 
