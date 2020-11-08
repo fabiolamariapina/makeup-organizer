@@ -17,3 +17,7 @@ Notes for later:
 
 Link to (somewhat) working app:
 https://makeup-organizer.herokuapp.com/home
+
+Things I have fixed and improved upon:
+- Date: November 7, 2020
+    * 
