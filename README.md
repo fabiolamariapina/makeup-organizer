@@ -23,3 +23,4 @@ Things I have fixed and improved upon:
 - Date: November 8, 2020
   - Instead of having two buttons for logging in and signing up on the home page, the only button is now the log-in. To sign up, you click on the link below the button. This is what most websites and apps style their pages.
   - Improved spcing between button and link.
+  - When hovering over a link, the link will change to the same color as the makeup organizer heading.
