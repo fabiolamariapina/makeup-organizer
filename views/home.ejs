@@ -15,13 +15,13 @@
           <div class="heading">
             <h3>I HELP YOU ORGANIZE YOUR MAKEUP</h3>
           </div>
-          <div class="buttons">
-            <button>
+          <div class="links">
+            <button class="log-in">
               <a href="/sessions/new">LOG IN</a>
             </button>
-            <button>
-              <a href="/users/new">NEW USER? CREATE AN ACCOUNT FOR FREE!</a>
-            </button>
+            <a class="new-user" href="/users/new"
+              >NEW USER? CLICK HERE CREATE AN ACCOUNT FOR FREE!</a
+            >
           </div>
         </div>
         <div class="image">
@@ -58,16 +58,22 @@
       text-align: center;
     }
 
-    .buttons {
+    .links {
       display: flex;
       flex-direction: column;
     }
 
-    button {
+    .log-in {
       background-color: #ddaf94;
       border-radius: 15px;
       padding: 10px;
       cursor: pointer;
+    }
+
+    .new-user {
+      text-align: center;
+      position: relative;
+      top: 10px;
     }
 
     a {

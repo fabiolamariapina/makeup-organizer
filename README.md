@@ -19,5 +19,7 @@ Link to (somewhat) working app:
 https://makeup-organizer.herokuapp.com/home
 
 Things I have fixed and improved upon:
-- Date: November 7, 2020
-    * 
+
+- Date: November 8, 2020
+  - Instead of having two buttons for logging in and signing up on the home page, the only button is now the log-in. To sign up, you click on the link below the button. This is what most websites and apps style their pages.
+  - Improved spcing between button and link.
